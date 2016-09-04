@@ -1,0 +1,135 @@
+<div id="got-battles-battle" class="page-layout simple tabbed" layout="column">
+
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="start center">
+    <div class="white-fg" layout="row" layout-align="start center" flex>
+      <md-button class="goto-battles-button md-icon-button" aria-label="Go to riders"
+                 ng-click="vm.gotobattles()">
+        <md-icon md-font-icon="icon-arrow-left"></md-icon>
+      </md-button>
+
+      <div layout="row" layout-align="start center">
+        <div class="product-image" hide-xs>
+          <ng-md-icon icon="store_mall_directory" style="fill: #ffffff" size="47"></ng-md-icon>
+        </div>
+
+        <div layout="column" layout-align="start start">
+          <div class="h2">
+            <span >Battle Information</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- / HEADER -->
+
+
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="battle-detail-form-container md-background-bg md-whiteframe-1dp">
+      <form >
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Name</label>
+            <input name="battlename" ng-model="vm.battle.name" ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Year</label>
+            <input name="year" ng-model="vm.battle[CONSTS.battle.year]" ng-readonly="true" >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Battle No</label>
+            <input name="no" ng-model="vm.battle[CONSTS.battle.no]" ng-readonly="true" >
+          </md-input-container>
+        </div>
+
+        <div layout-gt-xs="row" layout-align="start center">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Attacking King</label>
+            <input name="attackking" ng-model="vm.battle[CONSTS.battle.attacker]" ng-readonly="true" >
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Defending King</label>
+            <input name="defendingking" ng-model="vm.battle[CONSTS.battle.defender]" ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Attackers</label>
+            <input name="attackers" ng-model="vm.battle[CONSTS.battle.attackers]" ng-list ng-readonly="true" >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Defenders</label>
+            <input name="defenders" ng-model="vm.battle[CONSTS.battle.defenders]" ng-list ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Attacker Outcome</label>
+            <input name="outcome" ng-model="vm.battle[CONSTS.battle.outcome]"  ng-readonly="true" >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Battle Type</label>
+            <input name="battletype" ng-model="vm.battle[CONSTS.battle.type]"  ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Attacking Size</label>
+            <input name="attacksize" ng-model="vm.battle[CONSTS.battle.attackSize]"  ng-readonly="true" >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Defending Size </label>
+            <input name="defencesize" ng-model="vm.battle[CONSTS.battle.defenceSize]"  ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Attacking Commanders</label>
+            <input name="attackcommanders" ng-model="vm.battle[CONSTS.battle.attackCommanders]" ng-list="" ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Defending Commanders </label>
+            <input name="defenseCommander" ng-model="vm.battle[CONSTS.battle.defenceCommanders]" ng-list ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Location</label>
+            <input name="location" ng-model="vm.battle[CONSTS.battle.location]"  ng-readonly="true" >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>region </label>
+            <input name="defencesize" ng-model="vm.battle[CONSTS.battle.region]"  ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <md-switch ng-model="vm.battle[CONSTS.battle.majorDeath]" aria-label="Major Death?">Major Death </md-switch>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <md-switch ng-model="vm.battle[CONSTS.battle.majorCapture]" aria-label="Major Capture?">Major Capture </md-switch>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <md-switch ng-model="vm.battle[CONSTS.battle.summer]" aria-label="Summer?">Summer </md-switch>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Note</label>
+            <input name="note" ng-model="vm.battle[CONSTS.battle.note]"  ng-readonly="true" >
+          </md-input-container>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

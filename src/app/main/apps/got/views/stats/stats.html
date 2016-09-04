@@ -1,0 +1,110 @@
+
+<div id="got-battles-stats" class="page-layout simple tabbed" layout="column">
+
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="start center">
+
+
+      <div layout="row" layout-align="start center">
+        <div class="product-image" hide-xs>
+          <ng-md-icon icon="store_mall_directory" style="fill: #ffffff" size="47"></ng-md-icon>
+        </div>
+
+        <div layout="column" layout-align="start start">
+          <div class="h2">
+            <span >Statistics of Battle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <!-- / HEADER -->
+
+
+
+  <!-- CONTENT -->
+
+  <div class="content">
+    <div class="battle-stats-form-container md-background-bg md-whiteframe-1dp">
+      <form >
+        <div class="p-15">
+        <md-toolbar class="md-theme-light">
+          <h2 class="md-toolbar-tools">
+            <span>Most Active</span>
+          </h2>
+        </md-toolbar>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Attacker King</label>
+            <input name="attacker king" ng-model="vm.stats.most_active.attacker_king" ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Defender King</label>
+            <input name="defenderKing" ng-model="vm.stats.most_active.defender_king" ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Region</label>
+            <input name="defenderKing" ng-model="vm.stats.most_active.region" ng-readonly="true" >
+          </md-input-container>
+        </div>
+
+        <div class="p-15">
+          <md-toolbar class="md-theme-light">
+            <h2 class="md-toolbar-tools">
+              <span>Defender Size</span>
+            </h2>
+          </md-toolbar>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Max</label>
+            <input name="Max" ng-model="vm.stats.defender_size.max" ng-readonly="true" >
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Min</label>
+            <input name="Max" ng-model="vm.stats.defender_size.min" ng-readonly="true" >
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Avg</label>
+            <input name="Max" ng-model="vm.stats.defender_size.avg" ng-readonly="true" >
+          </md-input-container>
+        </div>
+        <div class="p-15">
+          <md-toolbar class="md-theme-light">
+            <h2 class="md-toolbar-tools">
+              <span>Attacker outcome</span>
+            </h2>
+          </md-toolbar>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Win</label>
+            <input name="Max" ng-model="vm.stats.attacker_outcome.win" ng-readonly="true" >
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Loss</label>
+            <input name="Max" ng-model="vm.stats.attacker_outcome.loss" ng-readonly="true" >
+          </md-input-container>
+
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Battle Types</label>
+            <input name="Max" ng-model="vm.stats.battle_type" ng-list="" ng-readonly="true" >
+          </md-input-container>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

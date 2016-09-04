@@ -1,0 +1,44 @@
+<md-dialog aria-label="Column Mapping"  ng-cloak>
+  <form name="form">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Login Form</h2>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div layout-gt-sm="row" layout-margin layout-padding layout-align="center center">
+              <div flex >{{Username}}: </div>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                <input name="username" ng-model="username" type="text"  required>
+                 <div ng-messages="form.username.$error" ng-show="form.username.$error">
+                  <div ng-message="required">This is required!</div>
+                </div>
+              </md-input-container>
+        </div>
+        <div layout-gt-sm="row" layout-margin layout-padding layout-align="center center">
+              <div flex >{{Password}}: </div>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                <input name="password" ng-model="password" type="password"  required>
+                 <div ng-messages="form.password.$error" ng-show="form.password.$error">
+                  <div ng-message="required">This is required!</div>
+                </div>
+              </md-input-container>
+        </div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="answer('not useful')">
+       OK
+      </md-button>
+      <md-button ng-click="answer('useful')">
+        Cancel
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
+
